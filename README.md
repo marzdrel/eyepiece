@@ -24,7 +24,7 @@ class User < ApplicationRecord
 end
 ```
 
-**`like`** - find exactly one record (raises `ArgumentError` if multiple match):
+**`like`** - find exactly one record (raises `Eyepiece::TooManyRecordsError` if multiple match):
 
 ```ruby
 User.like("john")            # searches first_name, last_name, email

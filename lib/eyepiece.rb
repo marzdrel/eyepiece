@@ -6,4 +6,5 @@ require_relative "eyepiece/quick_brief_scope"
 
 module Eyepiece
   class Error < StandardError; end
+  class TooManyRecordsError < Error; end
 end

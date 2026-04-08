@@ -54,7 +54,7 @@ RSpec.describe Eyepiece::QuickSearch do
         .to receive_message_chain(:connection, :quote_column_name) { |name| "\"#{name}\"" }
 
       expect { model.like("test") }
-        .to raise_error ArgumentError, /\(2\) for "test"/
+        .to raise_error Eyepiece::TooManyRecordsError, /\(2\) for "test"/
     end
 
     it "returns all results when require_one is false" do

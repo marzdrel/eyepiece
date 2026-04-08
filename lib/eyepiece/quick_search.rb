@@ -52,7 +52,7 @@ module Eyepiece
 
       def raise_error(count)
         raise(
-          ArgumentError,
+          Eyepiece::TooManyRecordsError,
           format(
             "too many records (%<count>d) for \"%<query>s\"",
             count: count,
