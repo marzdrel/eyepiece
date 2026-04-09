@@ -15,6 +15,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 3.2.0"
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = spec.homepage
+  spec.metadata["changelog_uri"] = "#{spec.homepage}/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   gemspec = File.basename(__FILE__)
@@ -22,6 +23,7 @@ Gem::Specification.new do |spec|
     (f == gemspec) ||
       f.start_with?(*%w[bin/ Gemfile .gitignore .rspec spec/])
   end
+  spec.files += %w[CHANGELOG.md]
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
