@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["John Doe"]
   spec.email = ["test@example.com"]
 
-  spec.summary = "QuickSearch and QuickBriefScope for ActiveRecord models"
+  spec.summary = "Search and Brief scope modules for ActiveRecord models"
   spec.description = "Provides parameterized modules for fast ILIKE searching and brief scope selection on ActiveRecord models."
   spec.homepage = "https://github.com/example/eyepiece"
   spec.license = "MIT"

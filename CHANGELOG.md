@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/), and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [0.3.0] - 2026-04-09
+
+### Changed
+- Rename `QuickSearch` to `Search` and `QuickBriefScope` to `Brief`
+- Old names are preserved as backward-compatible aliases
+
+### Added
+- `CHANGELOG.md` with `changelog_uri` in gemspec metadata
+
 ## [0.2.0] - 2026-04-09
 
 ### Changed
