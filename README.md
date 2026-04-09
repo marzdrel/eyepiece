@@ -14,13 +14,13 @@ Then run `bundle install`.
 
 ## Usage
 
-### QuickSearch
+### Search
 
 Adds `like` and `mlike` class methods for case-insensitive text search across specified columns.
 
 ```ruby
 class User < ApplicationRecord
-  include Eyepiece::QuickSearch.new(:first_name, :last_name, :email)
+  include Eyepiece::Search.new(:first_name, :last_name, :email)
 end
 ```
 
@@ -37,13 +37,13 @@ User.like("john", "doe")     # matches records containing "john" OR "doe"
 User.mlike("smith")          # returns all matching records
 ```
 
-### QuickBriefScope
+### Brief
 
 Adds a scope that reselects only the specified columns. Useful for lightweight queries.
 
 ```ruby
 class User < ApplicationRecord
-  include Eyepiece::QuickBriefScope.new(:id, :email, :name)
+  include Eyepiece::Brief.new(:id, :email, :name)
 end
 
 User.brief  # SELECT id, email, name FROM users
@@ -53,7 +53,7 @@ Custom method name:
 
 ```ruby
 class User < ApplicationRecord
-  include Eyepiece::QuickBriefScope.new(:id, :email, method: :summary)
+  include Eyepiece::Brief.new(:id, :email, method: :summary)
 end
 
 User.summary  # SELECT id, email FROM users
